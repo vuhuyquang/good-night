@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>爱你 <3</title>
+    <style>
+        @font-face {
+            font-family: 'Frankfurter';
+            src: url('UVFKaileen.ttf') format('truetype');
+            font-weight: bold;
+            font-style: normal;
+        }
+
+        body {
+            background-color: #1e3a8a;
+            color: #fff;
+            font-family: 'Frankfurter', sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .text {
+            font-size: 3.2rem;
+            margin: 0;
+            display: inline-block;
+            opacity: 0;
+            visibility: hidden;
+            margin-bottom: 0.8rem;
+        }
+
+        .text-second {
+            font-size: 1.8rem;
+            margin: 0 !important;
+            opacity: 0;
+            visibility: hidden;
+            display: block;
+        }
+
+        .text span,
+        .text-second span {
+            display: inline-block;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        .text-second {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 1rem;
+        }
+
+        .text-second div {
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-top: 40px;
+            mask-border: radial-gradient(#000 69%,#0000 70%) 84.5%/50%;
+            mask:
+            radial-gradient(at 70% 31%,#000 29%,#0000 30%),
+            radial-gradient(at 30% 31%,#000 29%,#0000 30%),
+            linear-gradient(#000 0 0) bottom/100% 50% no-repeat;
+            clip-path: polygon(-41% 0,50% 91%, 141% 0);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .heart {
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            background-color: #ff69b4;
+            transform: rotate(-45deg);
+            animation: animateHeart 6s infinite;
+        }
+
+        .heart::before,
+        .heart::after {
+            content: "";
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            background-color: #ff69b4;
+            border-radius: 50%;
+        }
+
+        .heart::before {
+            top: -12px;
+            left: 0;
+        }
+
+        .heart::after {
+            left: 12px;
+            top: 0;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes animateHeart {
+            0% {
+                opacity: 0;
+                transform: translateY(0) scale(0.5);
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+                transform: translateY(-100px) scale(1);
+            }
+        }
+
+        .heart:nth-child(1) {
+            left: 20%;
+            animation-duration: 5s;
+            animation-delay: 1s;
+        }
+
+        .heart:nth-child(2) {
+            left: 50%;
+            animation-duration: 6s;
+            animation-delay: 2s;
+        }
+
+        .heart:nth-child(3) {
+            left: 80%;
+            animation-duration: 4s;
+            animation-delay: 3s;
+        }
+
+        .heart:nth-child(4) {
+            left: 30%;
+            animation-duration: 7s;
+            animation-delay: 4s;
+        }
+
+        .heart:nth-child(5) {
+            left: 70%;
+            animation-duration: 5.5s;
+            animation-delay: 2.5s;
+        }
+
+        @media (max-width: 768px) {
+            body{
+                margin-top: -50px;
+            }
+            
+            .text {
+                font-size: 2rem;
+            }
+
+            .text-second {
+                font-size: 1.2rem;
+            }
+
+            img {
+                width: 120px;
+                height: 120px;
+            }
+            .heart {
+                width: 16px;
+                height: 16px;
+            }
+
+            .heart::before,
+            .heart::after {
+                width: 16px;
+                height: 16px;
+            }
+
+            .heart::before {
+                top: -8px;
+            }
+
+            .heart::after {
+                left: 8px;
+            }
+            .heart:nth-child(4) {
+                left: 26% !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="text" id="firstText">
+        <span>C</span><span>h</span><span>ú</span><span>c</span>
+        <span>D</span><span>z</span><span>i</span>
+        <span>N</span><span>g</span><span>ủ</span>
+        <span>N</span><span>g</span><span>o</span><span>n</span>
+    </h1>
+    <h2 class="text-second" id="secondText">
+        <div>
+            <span>M</span><span>o</span><span>n</span><span>g</span>
+            <span>d</span><span>z</span><span>i</span>
+            <span>c</span><span>ó</span>
+            <span>m</span><span>ộ</span><span>t</span>
+            <span>g</span><span>i</span><span>ấ</span><span>c</span>
+            <span>n</span><span>g</span><span>ủ</span>
+            <span>t</span><span>h</span><span>ậ</span><span>t</span>
+        </div>
+        <div>
+            <span>ê</span><span>m</span>
+            <span>á</span><span>i</span>
+            <span>v</span><span>à</span>
+            <span>m</span><span>ơ</span>
+            <span>n</span><span>h</span><span>ữ</span><span>n</span><span>g</span>
+            <span>g</span><span>i</span><span>ấ</span><span>c</span>
+            <span>m</span><span>ơ</span>
+            <span>đ</span><span>ẹ</span><span>p</span> <span><:3</span>
+        </div>
+    </h2>
+    <img src="https://scontent.fhan14-1.fna.fbcdn.net/v/t39.30808-6/397140671_359569999848256_5086367123337584548_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=a5f93a&_nc_ohc=CV7gY7YI-AwQ7kNvgEo5yUz&_nc_ht=scontent.fhan14-1.fna&oh=00_AYBMMF2y5fjejBX7i0qfuOcP2yNdwwuMvjUlgG0DKLVAyg&oe=66D768AF" alt="Vi dễ thương" />
+
+    <!-- Hiệu ứng trái tim -->
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+    <div class="heart"></div>
+
+    <script>
+        function animateText(element, delay, callback) {
+            const letters = element.querySelectorAll('span');
+            element.style.visibility = 'visible';
+            element.style.opacity = 1;
+
+            letters.forEach((letter, i) => {
+                setTimeout(() => {
+                    letter.style.opacity = 1;
+                    if (i === letters.length - 1 && callback) {
+                        callback();
+                    }
+                }, delay * i);
+            });
+        }
+
+        // Hiển thị dòng chữ đầu tiên
+        animateText(document.getElementById('firstText'), 300, () => {
+            // Sau khi dòng chữ đầu tiên hoàn thành, hiển thị dòng thứ hai
+            animateText(document.getElementById('secondText'), 150);
+        });
+    </script>
+</body>
+
+</html>
